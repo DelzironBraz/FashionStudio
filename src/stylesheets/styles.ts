@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -22,7 +23,7 @@ export const DarkOverlay = styled.div`
     background-color: ${props => `rgba(${props.theme.bodyRgba}, .6)`};
 `;
 
-export const Title = styled.div`
+export const Title = styled(motion.div)`
     position: absolute;
     top: 0;
     left: 0;
@@ -48,11 +49,44 @@ export const Title = styled.div`
     }
 
     h2 {
-        font-family: 'Sirin Stencil', sans-serif;
         font-size: ${props => props.theme.fontlg};
         text-shadow: 1px 1px 1px ${props => props.theme.body};
         text-transform: capitalize;
         text-align: center;
         font-weight: 400;
     }
+`;
+
+export const Container = styled.div`
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 100%;
+    color: ${props => props.theme.text};
+    z-index: 5;
+
+    svg {
+        width: 4rem;
+        height: auto;
+        overflow: visible;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+
+        g {
+            path {
+                stroke: ${props => props.theme.text};
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: flex-end;
+    }
+`;
+
+export const Text = styled(motion.span)`
+    color: ${props => props.theme.text};
+    font-size: ${props => props.theme.fontlg};
+    padding-bottom: .5rem;
 `;
