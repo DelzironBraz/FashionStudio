@@ -1,5 +1,6 @@
 import { CoverVideo } from "../components/CoverVideo";
 import { Logo } from "../components/Logo";
+import { Navbar } from "../components/Navbar";
 import { Section } from "../stylesheets/styles"
 
 export const Home = () => {
@@ -7,6 +8,7 @@ export const Home = () => {
         <Section>
             <CoverVideo />
             <Logo />
+            <Navbar />
         </Section>
     );
 };

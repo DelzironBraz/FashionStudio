@@ -36,7 +36,7 @@ export const CoverVideo = () => {
                     <motion.h1 variants={itemVariants} data-scroll data-scroll-delay='.06' data-scroll-speed="4">b</motion.h1>
                     <motion.h1 variants={itemVariants} data-scroll data-scroll-delay='.04' data-scroll-speed="4">e</motion.h1>
                 </div>
-                <h2 data-scroll data-scroll-delay='.04' data-scroll-speed="2">Inspire. Create. Belive </h2>
+                <motion.h2 variants={itemVariants} data-scroll data-scroll-delay='.04' data-scroll-speed="2">Inspire. Create. Belive </motion.h2>
             </Title>
             <video className="w-full h-screen object-cover" autoPlay loop muted playsInline src={mainVideo} />
         </VideoContainer>
